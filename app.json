@@ -6,7 +6,7 @@
   "env": {
     "ADMIN": {
       "description": "Isi dengan id admin",
-      "value": ""
+      "value": "botanonbot"
     },
     "TOKEN": {
       "description": "Dapatkan di @botfather",
@@ -14,7 +14,7 @@
     },
     "OWNER": {
       "description": "Isi dengan username kalian tanpa tanda @",
-      "value": "kenkanasw"
+      "value": "botanon_bot"
     },
     "GROUP": {
       "description": "Isi dengan username group kalian tanpa tanda @ kalau gak punya gak usah isi",
