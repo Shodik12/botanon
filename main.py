@@ -115,7 +115,7 @@ def handle(update):
 				lolt = ReplyKeyboardMarkup,input(keyboard=[
                     ['Plain Text', KeyboardButton(text='Text only')],
 					[dict(text='phone', request_contact=True), KeyboardButton(text='Location', request_location=True)]], resize_keyboard=True)
-				bot.sendMessage(uid, "contoh", reply_markup=gender)
+				bot.sendMessage(uid, "contoh", reply_markup=lolt)
 
 		elif text == "Pengguna👤":
 			file = json.loads(open("app.json", "r").read())
