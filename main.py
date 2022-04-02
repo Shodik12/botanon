@@ -113,9 +113,9 @@ def handle(update):
 		if text == "/test":
 			if not uid in queue["occupied"]:
 				lolt = ReplyKeyboardMarkup(keyboard=[
-                    ['Plain text', KeyboardButton(text='Text only')],
+                    [gender = input('jenis kelamin'), KeyboardButton(text='Text only')],
 					[dict(text='phone', request_contact=True), KeyboardButton(text='Location', request_location=True)]], resize_keyboard=True)
-				bot.sendMessage(uid, "contoh", reply_markup=lolt)
+				bot.sendMessage(uid, "contoh", reply_markup=gender)
 
 		elif text == "Pengguna👤":
 			file = json.loads(open("app.json", "r").read())
@@ -211,7 +211,7 @@ def handle(update):
 				queue["free"].remove(partner)
 				queue["occupied"][uid] = partner
 				queue["occupied"][partner] = uid
-				bot.sendMessage(uid, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
+				bot.sendMessage(uid,gender, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
 				bot.sendMessage(partner, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
 	except 	Exception as e:
 		print('[!] Error: ' + str(e))
