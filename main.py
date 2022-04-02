@@ -112,8 +112,8 @@ def handle(update):
 
 		if text == "/test":
 			if not uid in queue["occupied"]:
-				lolt = ReplyKeyboardMarkup(keyboard=[
-                    [gender = input('jenis kelamin'), KeyboardButton(text='Text only')],
+				lolt = ReplyKeyboardMarkup,input(keyboard=[
+                    ['Plain Text', KeyboardButton(text='Text only')],
 					[dict(text='phone', request_contact=True), KeyboardButton(text='Location', request_location=True)]], resize_keyboard=True)
 				bot.sendMessage(uid, "contoh", reply_markup=gender)
 
@@ -211,7 +211,7 @@ def handle(update):
 				queue["free"].remove(partner)
 				queue["occupied"][uid] = partner
 				queue["occupied"][partner] = uid
-				bot.sendMessage(uid,gender, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
+				bot.sendMessage(uid,lolt, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
 				bot.sendMessage(partner, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
 	except 	Exception as e:
 		print('[!] Error: ' + str(e))
